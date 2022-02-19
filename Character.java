@@ -13,10 +13,16 @@ public class Character {
  private int power;
  /**防御力*/
  private int defense;
+ /**経験値*/
+ private int exp;
+ /**レベル*/
+ private int level;
 
  public Character(String name,String gender) {
     this.name = name;
     this.gender = gender;
+    this.exp = 0;
+    this.level = 1;
  }
 
  public String  getName() {
@@ -68,5 +74,21 @@ public class Character {
 
  public int getAttackPower() {
    return weapon.getPower() + this.power;
+ }
+
+ public int getDefense() {
+   return defense; 
+ }
+
+ public void setDefense(int defense) {
+   this.defense = defense;
+ }
+
+ public void addExp(int exp) {
+   this.exp += exp;
+ }
+
+ public void levelUp() {
+  this.level++;
  }
 }

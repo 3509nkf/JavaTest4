@@ -1,8 +1,7 @@
 package edu.rpg.personal;
-public enum Gender2 {
-	MALE("男性"),FEMALE("女性");
-        private String name;
-        private Gender(String name) {
+public class Gender2 {
+        public String name;
+        public Gender2(String name) {
            this.name = name;
         }
         public String getName() {
